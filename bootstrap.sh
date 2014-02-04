@@ -8,8 +8,11 @@ ln -fs /vagrant /var/www
 # Base utilities
 apt-get install -y git
 apt-get install -y vim.tiny
+apt-get install -y libpcre3-dev
+apt-get install -y curl
 
 # Python-related.
+apt-get install -y python-dev
 apt-get install -y python-pip
 pip install virtualenv
 pip install pymongo
