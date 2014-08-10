@@ -11,10 +11,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "192.168.50.4"
   config.vm.network "forwarded_port", guest: 5000, host: 5000, auto_correct: true
+  config.vm.network "forwarded_port", guest: 1337, host: 1337, auto_correct: true
 
   config.vm.box_url = "http://files.vagrantup.com/precise32.box" 
 
-  #config.vm.synced_folder "../vagrant-development", "/home/vagrant/dev"
+  config.vm.synced_folder "../vagrant-development", "/home/vagrant/dev"
 
   config.vm.provider :virtualbox do |vb|
      # Don't boot with headless mode
